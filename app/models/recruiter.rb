@@ -1,6 +1,7 @@
 class Recruiter < ApplicationRecord
-    belongs_to :company
-    has_many :recruiterteams
-    has_many :teams, through: :recruiterteams
-    
+  has_secure_password
+  belongs_to :company
+  has_many :recruiterteams
+  has_many :teams, through: :recruiterteams
+
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_12_012800) do
+ActiveRecord::Schema.define(version: 2023_01_12_021557) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2023_01_12_012800) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
+    t.string "password_digest"
     t.boolean "admin"
     t.bigint "company_id"
     t.datetime "created_at", precision: 6, null: false
@@ -54,5 +55,4 @@ ActiveRecord::Schema.define(version: 2023_01_12_012800) do
   add_foreign_key "recruiterteams", "recruiters"
   add_foreign_key "recruiterteams", "teams"
   add_foreign_key "teams", "companies"
-
 end
