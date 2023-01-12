@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  resources :recruiterteams
+  resources :recruiters
+  resources :teams
   resources :companies
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
